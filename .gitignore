@@ -1,27 +1,24 @@
-# Ignorar archivos de datos y telemetrías
-*.csv
-data/
-data/sessions/
-assets/
+# 1. Ignorar absolutamente todo por defecto
+*
 
-# Ignorar sistema de Setups (otros proyectos)
-setups/
-*.ini
+# 2. Permitir el archivo .gitignore y las documentaciones
+!.gitignore
+!README.md
+!DEVELOPER.md
 
-# Ignorar archivos generados y de cache de Python
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.Python
-env/
-venv/
-.venv/
-.env/
-pip-log.txt
-pip-delete-this-directory.txt
-.pytest_cache/
+# 3. Re-incluir archivos raíz esenciales del ecosistema
+!telemetry_app.py
+!record_session.py
+!extract_ac_splines.py
+!requirements.txt
 
-# Archivos de entorno y SO
+# 4. Re-incluir la carpeta standalone y todo su contenido de forma recursiva
+!telemetry_standalone/
+!telemetry_standalone/**
+
+# 5. Volver a ignorar archivos basura de Python que puedan aparecer dentro de la carpeta permitida
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.pyd
 .DS_Store
-Thumbs.db
