@@ -1,0 +1,27 @@
+# Ignorar archivos de datos y telemetrías
+*.csv
+data/
+data/sessions/
+assets/
+
+# Ignorar sistema de Setups (otros proyectos)
+setups/
+*.ini
+
+# Ignorar archivos generados y de cache de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+.env/
+pip-log.txt
+pip-delete-this-directory.txt
+.pytest_cache/
+
+# Archivos de entorno y SO
+.DS_Store
+Thumbs.db
